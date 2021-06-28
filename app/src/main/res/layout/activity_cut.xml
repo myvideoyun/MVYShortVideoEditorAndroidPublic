@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/cut_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/cut_back_bt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="#00ffffff"
+        android:src="@drawable/selector_record_back_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/cut_next_bt"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:text="next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.myvideoyun.shortvideo.customUI.FrameHorizontalView
+            android:id="@+id/frame_horizontal_view"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:max="100"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="@id/rangeView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/rangeView"
+            app:layout_constraintWidth_percent="1" />
+
+        <com.myvideoyun.shortvideo.customUI.FrameSeekView
+            android:id="@+id/rangeView"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:max="100"
+            android:orientation="horizontal"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.8" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

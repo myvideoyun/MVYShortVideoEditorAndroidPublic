@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_root_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.myvideoyun.shortvideo.MVYPreviewView
+        android:id="@+id/edit_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/edit_back_bt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/edit_next_page_bt"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:button="@null"
+        android:drawableTop="@drawable/selector_edit_original_audio_button"
+        android:id="@+id/edit_original_audio_bt"
+        android:layout_width="60dp"
+        android:gravity="center"
+        android:text="@string/edit_original_open"
+        android:checked="true"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_next_page_bt" />
+
+    <Button
+        android:id="@+id/edit_music_bt"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_original_audio_bt" />
+
+    <Button
+        android:id="@+id/edit_cut_audio_bt"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_music_bt" />
+
+    <Button
+        android:id="@+id/edit_audio_bt"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_cut_audio_bt" />
+
+    <Button
+        android:id="@+id/edit_video_effect_bt"
+        android:layout_width="60dp"
+        android:text="@string/edit_effect"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_audio_bt" />
+
+    <Button
+        android:id="@+id/edit_sticker_bt"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_video_effect_bt" />
+    <Button
+        android:id="@+id/edit_subtitle_bt"
+        android:layout_width="60dp"
+        android:text="@string/subtitle"
+        android:background="@color/transparent"
+        android:drawableTop="@drawable/ic_subtitles_black"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_sticker_bt" />
+    <Button
+        android:id="@+id/edit_cover_bt"
+        android:layout_width="60dp"
+        android:text="@string/cover"
+        android:background="@color/transparent"
+        android:drawableTop="@drawable/ic_subtitles_black"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_subtitle_bt" />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/edit_in_step_shoot"
+        android:background="@color/transparent"
+        android:drawableTop="@drawable/ic_subtitles_black"
+        android:text="@string/edit_in_step_shoot"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/blankCl"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--音量调节 View start-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/edit_volume_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="#55000000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/originalMusic"
+                android:textColor="@color/mxyTheme"
+                app:layout_constraintBottom_toBottomOf="@id/edit_original_volume_pb"
+                app:layout_constraintRight_toLeftOf="@id/edit_original_volume_pb"
+                app:layout_constraintTop_toTopOf="@id/edit_original_volume_pb" />
+
+            <SeekBar
+                android:id="@+id/edit_original_volume_pb"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toTopOf="@id/edit_music_volume_pb"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.8"
+                tools:max="100"
+                tools:progress="4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/music"
+                android:textColor="@color/mxyTheme"
+                app:layout_constraintBottom_toBottomOf="@id/edit_music_volume_pb"
+                app:layout_constraintRight_toLeftOf="@id/edit_music_volume_pb"
+                app:layout_constraintTop_toTopOf="@id/edit_music_volume_pb" />
+
+            <SeekBar
+                android:id="@+id/edit_music_volume_pb"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.8"
+                tools:max="100"
+                tools:progress="4" />
+        </android.support.constraint.ConstraintLayout>
+        <!--音量调节 View end-->
+
+        <!--贴纸选择 View start-->
+        <com.myvideoyun.shortvideo.page.record.view.StylePlane
+            android:id="@+id/stickerStylePlane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <!--贴纸选择 View end-->
+
+        <!--字幕输入 View start-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/edit_subtitle_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55000000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <EditText
+                android:textSize="12sp"
+                android:text="@string/inputTextForSubtitle"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/editView"
+                app:layout_constraintWidth_percent="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:gravity="center"
+                android:id="@+id/orangeBulbView"
+                android:background="@drawable/rectangle_shape"
+                app:layout_constraintWidth_percent="0.5"
+                android:singleLine="true"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/editView"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:id="@+id/greenBulbView"
+                android:background="@drawable/rectangle_shape_green"
+                app:layout_constraintWidth_percent="0.5"
+                app:layout_constraintTop_toBottomOf="@id/editView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:singleLine="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:id="@+id/blueBulbView"
+                android:background="@drawable/rectangle_shape_blue"
+                android:textSize="12sp"
+                app:layout_constraintWidth_percent="0.5"
+                app:layout_constraintTop_toBottomOf="@id/orangeBulbView"
+                app:layout_constraintLeft_toRightOf="@id/greenBulbView"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+        </android.support.constraint.ConstraintLayout>
+        <!--字幕输入 View end-->
+
+
+        <android.support.constraint.ConstraintLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:id="@+id/edit_range_bar_cl"
+            android:background="#55000000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.myvideoyun.shortvideo.customUI.RangeBar
+                android:id="@+id/range_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                app:rangeHeight="5dp"
+                app:rangeColor="@color/colorPrimary"
+                app:textArray="@array/range_array"
+                app:sliderDrawable="@mipmap/range_slider_icon"
+                app:solidBackgroundColor="@color/gray2"
+                android:layout_height="30dp" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <com.myvideoyun.shortvideo.customUI.MotionLayout
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:id="@+id/sticker_ml"
+        android:layout_height="match_parent">
+        <!--<TextView-->
+            <!--android:text="急急风"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:background="#ff0000"-->
+            <!--android:width="50dp"-->
+            <!--android:height="50dp" />-->
+        <!--<TextView-->
+            <!--android:text="娃哈哈"-->
+            <!--android:gravity="center"-->
+            <!--android:width="50dp"-->
+            <!--android:height="50dp"-->
+            <!--android:background="#ffff00"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp" />-->
+    </com.myvideoyun.shortvideo.customUI.MotionLayout>
+</android.support.constraint.ConstraintLayout>

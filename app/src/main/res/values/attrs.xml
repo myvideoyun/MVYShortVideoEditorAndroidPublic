@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MotionLayout_layout">
+        <attr name="percent_x" format="float"/>
+        <attr name="percent_y" format="float"/>
+    </declare-styleable>
+</resources>

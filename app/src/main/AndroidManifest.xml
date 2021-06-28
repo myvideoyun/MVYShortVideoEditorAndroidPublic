@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.myvideoyun.shortvideo">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".MVYApplication"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".page.input.InputActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".page.record.RecordActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.edit.EditActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.output.OutputActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.effect.EffectActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.music.MusicActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.input.video.ImportVideoActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.cut.CutActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.cutmusic.CutMusicActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.addpic.PictureActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.cover.CoverSelectionActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".page.input.image.ImportImageActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".page.input.image.transition.ImageTransitionActivity" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

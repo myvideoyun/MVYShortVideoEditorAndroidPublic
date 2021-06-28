@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rootView"
+    android:layout_height="match_parent">
+
+    <com.myvideoyun.shortvideo.MVYPreviewView
+        android:id="@+id/record_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,16:9"/>
+
+    <SurfaceView
+        android:visibility="gone"
+        android:id="@+id/edit_record_preview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="200dp"
+        app:layout_constraintDimensionRatio="w,16:9"
+        android:layout_height="0dp" />
+    <ImageButton
+        android:id="@+id/record_back_bt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/record_switch_camera_bt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/record_container_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded">
+
+        <Button
+            android:id="@+id/record_next_bt"
+            android:layout_width="80dp"
+            android:layout_height="44dp" />
+
+        <ImageButton
+            android:background="@color/transparent"
+            android:src="@drawable/selector_record_style_button"
+            android:id="@+id/record_style_bt"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="10dp" />
+
+        <CheckBox
+            android:id="@+id/record_beauty_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_record_beauty_button"
+            android:button="@null"
+            android:checked="false"
+            tools:ignore="ContentDescription" />
+
+        <CheckBox
+            android:id="@+id/record_flash_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_flash_selector"
+            android:button="@null"
+            android:gravity="center"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/record_music_bt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:src="@mipmap/btn_music_n"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <com.myvideoyun.shortvideo.page.record.view.SpeedRadioLayout
+        android:id="@+id/record_speed_radio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/record_progress_view" />
+
+    <View
+        android:id="@+id/record_progress_bg"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/record_progress_view"
+        app:layout_constraintLeft_toLeftOf="@+id/record_progress_view"
+        app:layout_constraintRight_toRightOf="@+id/record_progress_view"
+        app:layout_constraintTop_toTopOf="@+id/record_progress_view" />
+
+    <com.myvideoyun.shortvideo.page.record.view.ProgressView
+        android:id="@+id/record_progress_view"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/record_record_bt" />
+
+    <ImageButton
+        android:id="@+id/record_shoot_ib"
+        android:layout_marginRight="20dp"
+        android:background="@color/transparent"
+        android:src="@mipmap/btn_shoot"
+        app:layout_constraintTop_toTopOf="@id/record_record_bt"
+        app:layout_constraintBottom_toBottomOf="@id/record_record_bt"
+        app:layout_constraintRight_toLeftOf="@id/record_record_bt"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+
+    <Button
+        android:id="@+id/edit_in_step_shoot"
+        android:background="@color/transparent"
+        android:drawableTop="@drawable/ic_subtitles_black"
+        android:text="@string/edit_in_step_shoot"
+        app:layout_constraintTop_toTopOf="@id/record_shoot_ib"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/record_shoot_ib"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:id="@+id/record_record_bt"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <FrameLayout
+        android:id="@+id/record_button_right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/record_record_bt"
+        app:layout_constraintLeft_toRightOf="@+id/record_record_bt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/record_record_bt">
+
+        <ImageButton
+            android:id="@+id/record_remove_video_item_bt"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
+
+    <com.myvideoyun.shortvideo.page.record.view.StylePlane
+        android:id="@+id/record_style_plane_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/hiderCl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <android.support.constraint.ConstraintLayout
+            android:paddingStart="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#554e4546"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="强度"
+                app:layout_constraintBottom_toBottomOf="@id/record_intensity_sb"
+                app:layout_constraintRight_toLeftOf="@id/record_intensity_sb"
+                app:layout_constraintTop_toTopOf="@id/record_intensity_sb" />
+
+            <SeekBar
+                android:thumb="@color/white"
+                android:id="@+id/record_intensity_sb"
+                android:layout_width="0dp"
+                android:progress="10"
+                android:max="50"
+                android:indeterminateOnly="false"
+                android:layout_height="15dp"
+                android:progressDrawable="@drawable/seek_bar_style"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="饱和度"
+                app:layout_constraintBottom_toBottomOf="@id/record_saturability_sb"
+                app:layout_constraintRight_toLeftOf="@id/record_saturability_sb"
+                app:layout_constraintTop_toTopOf="@id/record_saturability_sb" />
+
+            <SeekBar
+                android:layout_marginTop="16dp"
+                android:thumb="@color/white"
+                android:id="@+id/record_saturability_sb"
+                android:layout_width="0dp"
+                android:progress="25"
+                android:max="50"
+                android:indeterminateOnly="false"
+                android:layout_height="15dp"
+                android:progressDrawable="@drawable/seek_bar_style"
+                app:layout_constraintTop_toBottomOf="@id/record_intensity_sb"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="亮度"
+                app:layout_constraintBottom_toBottomOf="@id/record_brightness_sb"
+                app:layout_constraintRight_toLeftOf="@id/record_brightness_sb"
+                app:layout_constraintTop_toTopOf="@id/record_brightness_sb" />
+
+            <SeekBar
+                android:layout_marginTop="16dp"
+                android:thumb="@color/white"
+                android:id="@+id/record_brightness_sb"
+                android:layout_width="0dp"
+                android:progress="25"
+                android:max="50"
+                android:indeterminateOnly="false"
+                android:layout_height="15dp"
+                android:progressDrawable="@drawable/seek_bar_style"
+                app:layout_constraintTop_toBottomOf="@id/record_saturability_sb"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.8" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/record_img_iv"
+        android:padding="5dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="160dp" />
+</android.support.constraint.ConstraintLayout>

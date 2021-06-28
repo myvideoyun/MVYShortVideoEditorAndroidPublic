@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/container_cl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHeight_percent="0.8"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <com.myvideoyun.shortvideo.MVYPreviewView
+            android:id="@+id/preview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/back_bt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="#00ffffff"
+        android:src="@drawable/selector_record_back_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/next_bt"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:text="next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.myvideoyun.shortvideo.customUI.FrameRangeView
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/cover_range_view"
+        style="?android:progressBarStyleHorizontal"
+        android:progress="4"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/container_cl"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_width="0dp"
+        android:layout_height="50dp" />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/coverIv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cover_range_view"
+        android:layout_width="90dp"
+        android:layout_height="160dp" />
+
+</android.support.constraint.ConstraintLayout>

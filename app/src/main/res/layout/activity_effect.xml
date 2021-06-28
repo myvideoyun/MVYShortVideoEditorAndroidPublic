@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="end"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/back_bt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="#00ffffff"
+            android:src="@drawable/selector_record_back_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/next_bt"
+            android:layout_width="80dp"
+            android:layout_height="44dp"
+            android:text="next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </RelativeLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/container_cl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+        <com.myvideoyun.shortvideo.MVYPreviewView
+            android:id="@+id/preview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.constraint.ConstraintLayout>
+    <com.myvideoyun.shortvideo.customUI.FrameRangeView
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/cover_range_view"
+        style="?android:progressBarStyleHorizontal"
+        android:progress="4"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/container_cl"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:textSize="14sp"
+        android:id="@+id/withdraw_btn"
+        android:visibility="invisible"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cover_range_view"
+        android:layout_width="wrap_content"
+        android:text="@string/withdraw"
+        android:layout_height="40dp" />
+    <com.myvideoyun.shortvideo.page.common.EffectHorizontalView
+        android:id="@+id/effet_list_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grayColor"
+        android:layout_height="0.5dp"/>
+    <RadioGroup
+        android:id="@+id/effect_rg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/effect_filter_rb"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/selector_effect_text_btn"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/effect_filter_rb"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="0.5dp"
+            android:background="@color/grayColor"
+            android:layout_height="match_parent"/>
+        <RadioButton
+            android:checked="false"
+            android:id="@+id/effect_time_rb"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/selector_effect_text_btn"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/effect_time_rb"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/coverIv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cover_range_view"
+        android:layout_width="90dp"
+        android:layout_height="160dp" />
+
+</LinearLayout>

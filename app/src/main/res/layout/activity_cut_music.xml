@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.myvideoyun.shortvideo.MVYPreviewView
+        android:id="@+id/cut_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageButton
+        android:id="@+id/cut_back_bt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="#00ffffff"
+        android:src="@drawable/selector_record_back_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/cut_next_bt"
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:text="选好了"
+        app:layout_constraintBottom_toTopOf="@id/rangeView"
+        app:layout_constraintRight_toRightOf="@id/rangeView" />
+    <com.myvideoyun.shortvideo.customUI.FrameRangeView
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/rangeView"
+        android:max="100"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_width="0dp"
+        android:layout_height="50dp" />
+</android.support.constraint.ConstraintLayout>

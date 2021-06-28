@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/com.myvideoyun.shortvideo"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/input_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/input_resolution_tv"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_title_tv"
+        app:layout_constraintWidth_percent="0.26"/>
+
+    <com.myvideoyun.shortvideo.customUI.RadioGroup
+        android:id="@+id/input_resolution_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/input_resolution_tv"
+        app:layout_constraintTop_toTopOf="@+id/input_resolution_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/input_resolution_tv"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:id="@+id/input_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_resolution_tv"/>
+
+    <TextView
+        android:id="@+id/input_frame_rate_tv"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_line"
+        app:layout_constraintWidth_percent="0.26" />
+
+    <com.myvideoyun.shortvideo.customUI.RadioGroup
+        android:id="@+id/input_frame_rate_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/input_frame_rate_tv"
+        app:layout_constraintTop_toTopOf="@+id/input_frame_rate_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/input_frame_rate_tv"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:id="@+id/input_line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_frame_rate_tv" />
+
+    <TextView
+        android:id="@+id/input_video_bitrate_tv"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_line1"
+        app:layout_constraintWidth_percent="0.26" />
+
+    <com.myvideoyun.shortvideo.customUI.RadioGroup
+        android:id="@+id/input_video_bitrate_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/input_video_bitrate_tv"
+        app:layout_constraintTop_toTopOf="@+id/input_video_bitrate_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/input_video_bitrate_tv"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:id="@+id/input_line2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_video_bitrate_tv" />
+
+    <TextView
+        android:id="@+id/input_audio_bitrate_tv"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_line2"
+        app:layout_constraintWidth_percent="0.26" />
+
+    <com.myvideoyun.shortvideo.customUI.RadioGroup
+        android:id="@+id/input_audio_bitrate_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/input_audio_bitrate_tv"
+        app:layout_constraintTop_toTopOf="@+id/input_audio_bitrate_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/input_audio_bitrate_tv"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:id="@+id/input_line3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_audio_bitrate_tv" />
+
+    <TextView
+        android:id="@+id/input_screen_rate_tv"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_line3"
+        app:layout_constraintWidth_percent="0.26" />
+
+    <com.myvideoyun.shortvideo.customUI.RadioGroup
+        android:id="@+id/input_screen_rate_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/input_screen_rate_tv"
+        app:layout_constraintTop_toTopOf="@+id/input_screen_rate_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/input_screen_rate_tv"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:id="@+id/input_line4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_screen_rate_tv" />
+
+    <Button
+        android:id="@+id/input_import_bt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintWidth_percent="0.33"
+        app:layout_constraintRight_toLeftOf="@id/input_import_image_bt"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/input_import_image_bt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintWidth_percent="0.33"
+        app:layout_constraintRight_toLeftOf="@id/input_record_bt"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/input_record_bt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintWidth_percent="0.33"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        ndk{
+            abiFilters "armeabi-v7a"
+        }
+
+        externalNativeBuild {
+            cmake {
+                abiFilters "armeabi-v7a"
+                cppFlags "-frtti -fexceptions -w"
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('CMakeLists.txt')
+        }
+    }
+}
+

@@ -8,3 +8,7 @@
 6. import video
 7. images transitions
 8. time effects, including reverse play, repeated play
+
+
+Limitation:
+64-bit is not supported yet.
